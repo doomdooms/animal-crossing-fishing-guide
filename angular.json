@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/mystyles.scss",
             ],
             "scripts": []
           },
@@ -117,8 +117,13 @@
               "devServerTarget": "tom-nook:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "tom-nook"
 }

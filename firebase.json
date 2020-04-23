@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "tom-nook",
+      "public": "dist/tom-nook",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

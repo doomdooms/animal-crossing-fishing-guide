@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "acnh-fish-guide": {
+      "hosting": {
+        "tom-nook": [
+          "acnh-fish-guide"
+        ]
+      }
+    }
+  }
+}

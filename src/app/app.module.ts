@@ -1,18 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FishListComponent } from './fish-list/fish-list.component';
+import { FishComponent } from './fish/fish.component';
+
+const config = {
+  apiKey: 'AIzaSyAIta1S6V7qGJtuIMXFlZriMPo9aKUWmEg',
+  authDomain: 'acnh-fish-guide.firebaseapp.com',
+  databaseURL: 'https://acnh-fish-guide.firebaseio.com',
+  projectId: 'acnh-fish-guide',
+  storageBucket: 'acnh-fish-guide.appspot.com',
+  messagingSenderId: '866984317668',
+  appId: '1:866984317668:web:24999bfdfd3f1d560a52f1',
+  measurementId: 'G-W90H0D0YQN'
+};
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FishListComponent,
+    FishComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [
+    AngularFireModule,
+    AngularFirestoreModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
