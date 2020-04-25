@@ -1,18 +1,20 @@
-<div class="container">
-  <ul class="columns is-multiline is-mobile">
-    <li *ngFor="let fish of fishList | async" class="column is-2">
-      <app-fish
-        [id] = "fish.id"
-        [name] = "fish.name"
-        [ImgUrl]="fish.ImgUrl"
-        [location] = "fish.location"
-        [price]="fish.price"
-        [n_month]="fish.n_month"
-        [s_month]="fish.s_month"
-        [time]="fish.time"
-        [shadow]="fish.shadow"
-        [rarity]="fish.rarity"
-      ></app-fish>
-    </li>
-  </ul>
-</div>
+<section class="section">
+  <div class="container">
+    <ul class="columns is-multiline is-mobile">
+      <li *ngFor="let fish of fishList | async" class="column is-2">
+        <app-fish
+          [id] = "fish.id"
+          [name] = "fish.name"
+          [ImgUrl]="fish.ImgUrl"
+          [location] = "fish.location"
+          [price]="fish.price"
+          [n_month]="fish.n_month"
+          [s_month]="fish.s_month"
+          [time]="fish.time"
+          [shadow]="fish.shadow"
+          [rarity]="fish.rarity"
+        ></app-fish>
+      </li>
+    </ul>
+  </div>
+</section>

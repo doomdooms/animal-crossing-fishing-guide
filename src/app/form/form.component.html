@@ -1,0 +1,34 @@
+<section class="hero  is-success" style="background: url('../../assets/animalcrossingbackground-1.jpg');
+  background-size: contain;">
+  <div class="hero-body" >
+    <div class="container">
+      <br/>
+      <div class="title is-size-1  has-text-centered">Handy Dandy Animal Crossing Fishing Guide</div>
+      <form id="form" class="has-text-centered" [formGroup] = "form" (ngSubmit)="onSubmit(form.value)">
+        <p class="has-text-centered is-size-3">My island is in the </p>
+          <label>
+            <input class="custom-radio" type="radio" value="north" formControlName="selectedHemisphere" >
+            <span class="is-size-2 has-text-centered custom-radio-span">Northern</span>
+          </label>
+          <label>
+            <input class="custom-radio" type="radio" value="south" formControlName="selectedHemisphere">
+            <span class="is-size-2 has-text-centered custom-radio-span">Southern</span>
+          </label>
+        <p class="has-text-centered is-size-3">hemisphere.</p>
+        <br/>
+        <p class="has-text-centered is-size-3">Today is </p>
+        <div id="selectWrapper">
+        <select id="formSelect" class="is-medium has-text-centered is-size-2" form="form" formControlName="selectedMonth">
+          <option *ngFor="let month of months" value={{month.value}} [selected]="month.value == thisMonth">
+            {{month.name}}
+          </option>
+        </select>.
+        </div>
+        <br/>
+        <button class="button is-rounded is-light is-warning is-large" type="submit">
+          Show me what fish I can catch!
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

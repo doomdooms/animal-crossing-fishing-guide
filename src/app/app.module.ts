@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FishListComponent } from './fish-list/fish-list.component';
 import { FishComponent } from './fish/fish.component';
+import { FormComponent } from './form/form.component';
+import {ForSubmitService} from './for-submit.service';
 
 const config = {
   apiKey: 'AIzaSyAIta1S6V7qGJtuIMXFlZriMPo9aKUWmEg',
@@ -24,17 +27,21 @@ const config = {
   declarations: [
     AppComponent,
     FishListComponent,
-    FishComponent
+    FishComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(config),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AngularFireModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ForSubmitService
   ],
   bootstrap: [AppComponent]
 })

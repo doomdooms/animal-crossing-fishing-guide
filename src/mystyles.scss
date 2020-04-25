@@ -1,10 +1,38 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 $yellowish: rgb(244,234,188);
-
-
 $light: $yellowish;
+$brown: #7d6e68;
+
+$body-background-color: rgb(247,241,220);
+$family-primary: 'Fredoka One', cursive;
+$text: $brown;
+
+select#formSelect
+{
+  color: white;
+  border: transparent;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border-bottom: white solid;
+  background-color: transparent;
+}
+
+.custom-radio {
+  visibility: hidden;
+}
+
+.custom-radio-span {
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
 
 
 @import "../node_modules/bulma/bulma.sass";
+.custom-radio:checked + span {
+  background: $warning;
+}
+
